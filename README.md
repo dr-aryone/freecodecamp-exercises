@@ -7,3 +7,5 @@ Cool Beans!
 2/14/2018 Happy Valentine's day! I finished JS lingos. and started intermediate JS algorithms.
 
 2/15/2018. Going strong! Finished 285 challenges so far, doing intermediate algorithsm. 
+
+2/16/2018. I checked in! 295 challenges. I also went to the peak dental to deep cleaning :)
