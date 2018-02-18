@@ -9,3 +9,5 @@ Cool Beans!
 2/15/2018. Going strong! Finished 285 challenges so far, doing intermediate algorithsm. 
 
 2/16/2018. I checked in! 295 challenges. I also went to the peak dental to deep cleaning :)
+
+2/17/2018 301 challenges! Horseback riding with Sunny!
