@@ -11,3 +11,5 @@ Cool Beans!
 2/16/2018. I checked in! 295 challenges. I also went to the peak dental to deep cleaning :)
 
 2/17/2018 301 challenges! Horseback riding with Sunny!
+
+2/19 2018 Doing well, cranking up some intermediate projects now.
