@@ -13,3 +13,5 @@ Cool Beans!
 2/17/2018 301 challenges! Horseback riding with Sunny!
 
 2/19 2018 Doing well, cranking up some intermediate projects now.
+
+2/20 Finished all the intermediate proejcts in FCC. Found out there is beta version of FCC :)
