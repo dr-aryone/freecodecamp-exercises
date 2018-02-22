@@ -15,3 +15,5 @@ Cool Beans!
 2/19 2018 Doing well, cranking up some intermediate projects now.
 
 2/20 Finished all the intermediate proejcts in FCC. Found out there is beta version of FCC :)
+
+2/21 Started HackerRank
