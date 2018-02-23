@@ -17,3 +17,5 @@ Cool Beans!
 2/20 Finished all the intermediate proejcts in FCC. Found out there is beta version of FCC :)
 
 2/21 Started HackerRank
+
+2/22 I don't have to make updates to this text file anymore. Any acitivities on github count!
