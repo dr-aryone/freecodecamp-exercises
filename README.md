@@ -21,3 +21,5 @@ Cool Beans!
 2/22 I don't have to make updates to this text file anymore. Any acitivities on github count!
 
 3/25 I stopped doing this for a little while and was working on other platforms. But now I am back to it.. to its beta version!
+
+3/26/2018 I love Applied Visual Design!
