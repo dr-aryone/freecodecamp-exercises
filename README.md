@@ -23,3 +23,5 @@ Cool Beans!
 3/25 I stopped doing this for a little while and was working on other platforms. But now I am back to it.. to its beta version!
 
 3/26/2018 I love Applied Visual Design!
+
+3/27/2018 Learning about Grid systems.
