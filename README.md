@@ -27,3 +27,5 @@ Cool Beans!
 3/27/2018 Learning about Grid systems.
 
 3/28/2018 Learning Flexbox!
+
+3/29/2018 Finished Basic Javascript Beta.
