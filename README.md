@@ -33,3 +33,5 @@ Cool Beans!
 3/30/2018 Learning ES6 and watching TensorFlows together.
 
 3/31/2018 Deconstructing arrays.
+
+4/1/2018 Deconstructing Objects.
