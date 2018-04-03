@@ -35,3 +35,5 @@ Cool Beans!
 3/31/2018 Deconstructing arrays.
 
 4/1/2018 Deconstructing Objects.
+
+4/2/2018 Doing Responsive Web Projects.
