@@ -37,3 +37,5 @@ Cool Beans!
 4/1/2018 Deconstructing Objects.
 
 4/2/2018 Doing Responsive Web Projects.
+
+4/3/2018 Working on Regular Expressions.
