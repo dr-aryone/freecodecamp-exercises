@@ -39,3 +39,5 @@ Cool Beans!
 4/2/2018 Doing Responsive Web Projects.
 
 4/3/2018 Working on Regular Expressions.
+
+4/5/2018 Doing Basic Algorithm scripting with es6
