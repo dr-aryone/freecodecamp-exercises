@@ -43,3 +43,5 @@ Cool Beans!
 4/5/2018 Doing Basic Algorithm scripting with es6
 
 4/6/2018 Object Oriented Programming
+
+4//8/2018 Functional Programming
