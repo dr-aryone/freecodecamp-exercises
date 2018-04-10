@@ -45,3 +45,5 @@ Cool Beans!
 4/6/2018 Object Oriented Programming
 
 4//8/2018 Functional Programming
+
+4/9/2018 Intermediate Algorithm.
