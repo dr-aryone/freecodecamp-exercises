@@ -47,3 +47,5 @@ Cool Beans!
 4//8/2018 Functional Programming
 
 4/9/2018 Intermediate Algorithm.
+
+4/10/2018 Still working on Intermediate Algorithm.
