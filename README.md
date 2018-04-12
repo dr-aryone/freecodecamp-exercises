@@ -49,3 +49,5 @@ Cool Beans!
 4/9/2018 Intermediate Algorithm.
 
 4/10/2018 Still working on Intermediate Algorithm.
+
+4/11/2018 Wowzer. Still at it.
