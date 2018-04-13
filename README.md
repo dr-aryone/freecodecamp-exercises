@@ -51,3 +51,5 @@ Cool Beans!
 4/10/2018 Still working on Intermediate Algorithm.
 
 4/11/2018 Wowzer. Still at it.
+
+4/12/2018 Onto JavaScript Algorithms and Data Structures Project.
