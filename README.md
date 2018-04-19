@@ -59,3 +59,5 @@ Cool Beans!
 4/14/2018 Finished JavaScript Algorithms and Data Structures Project.
 
 4/15/2018 Finished Bootstrap adn SASS
+
+4/18/2018 Learning React
