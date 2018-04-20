@@ -61,3 +61,5 @@ Cool Beans!
 4/15/2018 Finished Bootstrap adn SASS
 
 4/18/2018 Learning React
+
+4/19/2018 Still at it.
