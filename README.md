@@ -63,3 +63,5 @@ Cool Beans!
 4/18/2018 Learning React
 
 4/19/2018 Still at it.
+
+4/20/2018 Reacting
