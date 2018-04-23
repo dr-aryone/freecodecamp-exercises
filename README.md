@@ -67,3 +67,5 @@ Cool Beans!
 4/20/2018 Reacting
 
 4/21/2018 :)
+
+4/22/2018 Halfway through
