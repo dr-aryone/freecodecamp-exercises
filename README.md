@@ -69,3 +69,5 @@ Cool Beans!
 4/21/2018 :)
 
 4/22/2018 Halfway through
+
+4/23/2018 3/4th way
