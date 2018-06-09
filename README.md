@@ -37,3 +37,37 @@ Cool Beans!
 4/1/2018 Deconstructing Objects.
 
 4/2/2018 Doing Responsive Web Projects.
+
+4/3/2018 Working on Regular Expressions.
+
+4/5/2018 Doing Basic Algorithm scripting with es6
+
+4/6/2018 Object Oriented Programming
+
+4//8/2018 Functional Programming
+
+4/9/2018 Intermediate Algorithm.
+
+4/10/2018 Still working on Intermediate Algorithm.
+
+4/11/2018 Wowzer. Still at it.
+
+4/12/2018 Onto JavaScript Algorithms and Data Structures Project.
+
+4/13/2018 # as above.
+
+4/14/2018 Finished JavaScript Algorithms and Data Structures Project.
+
+4/15/2018 Finished Bootstrap adn SASS
+
+4/18/2018 Learning React
+
+4/19/2018 Still at it.
+
+4/20/2018 Reacting
+
+4/21/2018 :)
+
+4/22/2018 Halfway through
+
+4/23/2018 3/4th way
