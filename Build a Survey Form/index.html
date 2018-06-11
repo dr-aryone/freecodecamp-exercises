@@ -1,138 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Survey Form</title>
+</head>
 
-    <title>Build a Survey Form</title>
-
-    <style>
-    #title {
-      margin-top:30px;
-      margin-bottom: 30px;
-    }
-
-    #description {
-      margin-top:-30px;
-      margin-bottom:30px;
-    }
-    </style>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src= "https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
-  </head>
-  <body>
-    <div class = "container">
-        <h1 id = "title" class = "text-center">Build a Survey Form</h1>
-        <div class="jumbotron">
-          <p id = "description" class="text-center">Tell me about who your favorite K-pop artist is</p>
-          <form id="survey-form">
-
-            <div class = "form-group row">
-                <label class = "col-sm-3 col-form-label" for="name" id="name-label">Name* </label>
-                <div class = "col-sm-9">
-                    <input id="name" type="text" class = "form-control" placeholder="Enter your name">
-                </div>
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+    </header>
+    <main>
+        <p id="description">Please select your favorite framework!</p>
+        <form id="survey-form">
+            <div class="property">
+                <label id="name-label" for="name">*Name: </label>
             </div>
-            <div class = "form-group row">
-                <label class = "col-sm-3 col-form-label" for="email"  id="email-label">Email* </label>
-                <div class = "col-sm-9">
-                    <input type="email" id="email" class = "form-control" placeholder="Enter your email">
-                </div>
-            </div>
-            <div class = "form-group row">
-                <label class = "col-sm-3 col-form-label" for="age"  id="number-label">Age* </label>
-                <div class = "col-sm-9">
-                    <input type="number" id="age" class = "form-control" placeholder="Enter your age" min="0" max="150">
-                </div>
-            </div>
-            <div class = "form-group row">
-                <label class = "col-sm-3 col-form-label" for="dropdown">What's your current standing </label>
-                <div class = "col-sm-9">
-                    <select class="custom-select" id="dropdown">
-                        <option>Student</option>
-                        <option>Part-time employee</option>
-                        <option>Full-time employee</option>
-                      </select>
-                </div>
-            </div>
-            <div class = "form-group row">
-                <label class = "col-sm-3 col-form-label" for="dropdown">How often do you follow around Kpop</label>
-                <div class = "col-sm-9 radio">
-                    <div class="form-check">
-                        <input class="form-check-input" name="group100" type="radio" id="radio100">
-                        <label class="form-check-label" for="radio100"a>Daily</lbel>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" name="group100" type="radio" id="radio101">
-                        <label class="form-check-label" for="radio101">Weekly</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" name="group100" type="radio" id="radio102">
-                        <label class="form-check-label" for="radio101">Monthly</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" name="group100" type="radio" id="radio103">
-                        <label class="form-check-label" for="radio101">Other</label>
-                    </div>
-                </div>
-            </div>
-            <div class = "form-group row">
-                <label class = "col-sm-3 col-form-label" for="dropdown">What's your current standing </label>
-                <div class = "col-sm-9">
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="checkbox100" checked="checked" value = "BTS">
-                        <label class="form-check-label" for="checkbox100">BTS</label>
-                    </div>                    
-                    <div class="form-check">
-                        <input type="checkbox" class="filled-in form-check-input"  value = "blackPink">
-                        <label class="form-check-label" for="checkbox101">Black Pink</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="filled-in form-check-input"  value = "Exo">
-                        <label class="form-check-label" for="checkbox101">Exo</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="filled-in form-check-input"  value = "Twice">
-                        <label class="form-check-label" for="checkbox101">Twice</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="filled-in form-check-input"  value = "Psy">
-                        <label class="form-check-label" for="checkbox101">Psy</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="filled-in form-check-input"  value = "Ikon">
-                        <label class="form-check-label" for="checkbox101">IKON</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="filled-in form-check-input"  value = "Other">
-                        <label class="form-check-label" for="checkbox101">Other</label>
-                    </div>
-                </div>
-            </div>
-            <div class = "form-group row">
-                <label class = "col-sm-3 col-form-label" for="dropdown">Any comments?</label>
-                <div class = "col-sm-9">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-            </div>
-            <div class = "form-group row">
-                <label class = "col-sm-3"></label>
-                <div class = "col-sm-9">
-                    <button class = "btn btn-primary" type="submit" id = "submit">Submit</button>
-                </div>
+            <div class="input">
+                <input type="text" class="inputBox" placeholder="Enter your name" id="name" name="input" required>
             </div>
 
-          </form>
-        </div>
-    </div>
-    
+            <div class="property">
+                <label id="email-label">*Email: </label>
+            </div>
+            <div class="input">
+                <input type="email" class="inputBox" placeholder="Enter your email" id="email" required>
+            </div>
 
-  </body>
+            <div class="property">
+                <label id="number-label">*Age: </label>
+            </div>
+            <div class="input">
+                <input type="number" class="inputBox" placeholder="Enter your age" id="number" min="0" max="140" required>
+            </div>
+
+            <div class="property">
+                <label>What option best describes your role?</label>
+            </div>
+            <div class="input">
+                <select id="dropdown" class="inputBox">
+                    <option value="student">Student</option>
+                    <option value="highschool">Highschool Graduate/GED</option>
+                    <option value="associate">Associate Degree</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <option value="master">Master's or Higher</option>
+                    <option value="fulltime">Full-time employee</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="property">
+                <label>Years of experience with Javascript</label>
+            </div>
+            <div class="input">
+                <input type="radio" name="beginner" value="5"> Less than 5 years
+                <br>
+                <input type="radio" name="beginner" value="10"> Between 5 and 15 years
+                <br>
+                <input type="radio" name="beginner" value="15"> More than 15 years
+                <br>
+            </div>
+
+            <div class="property">
+                <label>What's your favorite JavaScript Framework?</label>
+            </div>
+            <div class="input">
+                <input type="checkbox" id="frameworks" name="angular" value="angular">
+                <label for="frameworks">Angular</label>
+                <br>
+                <input type="checkbox" id="frameworks" name="react" value="react">
+                <label for="frameworks">React</label>
+                <br>
+                <input type="checkbox" id="frameworks" name="vue" value="vue">
+                <label for="frameworks">Vue</label>
+                <br>
+                <input type="checkbox" id="frameworks" name="meteor" value="meteor">
+                <label for="frameworks">Meteor</label>
+                <br>
+                <input type="checkbox" id="frameworks" name="ember" value="ember">
+                <label for="frameworks">Ember</label>
+                <br>
+            </div>
+
+            <div class="property">
+                <label>Why is it your favorite framework?</label>
+            </div>
+            <div class="input">
+                <textarea name="textarea" class="inputBox" rows="10" cols="50">Write something here</textarea>
+            </div>
+            <div></div>
+            <input type="submit" value="Submit" id="submit">
+
+        </form>
+    </main>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </html>
