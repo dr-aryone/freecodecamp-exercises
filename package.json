@@ -1,0 +1,19 @@
+{
+  "name": "freecodecamp",
+  "version": "1.0.0",
+  "description": "Solutions to FCC challenges",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shimphillip/FreeCodeCamp.git"
+  },
+  "author": "Phillip Shim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shimphillip/FreeCodeCamp/issues"
+  },
+  "homepage": "https://github.com/shimphillip/FreeCodeCamp#readme"
+}
