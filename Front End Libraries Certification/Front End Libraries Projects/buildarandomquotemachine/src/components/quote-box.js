@@ -43,18 +43,8 @@ class QuoteBox extends Component {
             </blockquote>
           </div>
         </div>
-        {/* <div className = "row">
-          <div className = "col-4">
-          </div>
-          <div className = "col-4">
-          <a href={"https://twitter.com/intent/tweet?related=freecodecamp&text=" + encodeURIComponent('"' + this.state.quote + '" - ' + this.state.author)} id="tweet-quote" target="_blank">Tweet This<i class="fab fa-twitter"></i></a>
-          </div>
-          <div className = "col-4">
-              <button type="button" className="btn btn-outline-success" id="new-quote" onClick={this.getQuote}>Another</button>
-          </div>
-        </div> */}
-          <a className ="btn btn-outline-info btn-lg btn-block" href={"https://twitter.com/intent/tweet?related=freecodecamp&text=" + encodeURIComponent('"' + this.state.quote + '" - ' + this.state.author)} id="tweet-quote" target="_blank">Tweet This <i class="fab fa-twitter"></i></a>
-          <button type="button" className="btn btn-outline-success btn-lg btn-block" id="new-quote" onClick={this.getQuote}>Another <i class="far fa-quote-right"></i></button>
+          <a className ="btn btn-outline-info btn-lg btn-block" href={"https://twitter.com/intent/tweet?related=freecodecamp&text=" + encodeURIComponent('"' + this.state.quote + '" - ' + this.state.author)} id="tweet-quote" target="_blank"><i className="fab fa-twitter"></i> THIS</a>
+          <button type="button" className="btn btn-outline-success btn-lg btn-block" id="new-quote" onClick={this.getQuote}>ANOTHER <i className="fas fa-quote-left"></i></button>
       </div>
     )
   }
