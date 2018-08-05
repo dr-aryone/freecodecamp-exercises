@@ -8,18 +8,22 @@ class QuoteBox extends Component {
       quote: [],
       author: ""
     }
-  }
+    this.getQuote = this.getQuote.bind(this);
+  };
 
-  componentDidMount() {
+  getQuote() {
     fetch("https://talaikis.com/api/quotes/random/")
     .then(res => res.json())
     .then((result)=> {
-      console.log(result);
       this.setState({
         quote: result.quote,
         author: result.author
       })
     })
+  };
+
+  componentDidMount() {
+    this.getQuote();
   };
 
   render() {
@@ -28,25 +32,29 @@ class QuoteBox extends Component {
         <div className='row'>
           <div className = "col-2">
           </div>
-          <div className = "col-8" id="text">
-            {this.state.quote}
+          <div className = "col-8">
+            <blockquote className="blockquote">
+              <p className="mb-0" id="text">
+                {this.state.quote}
+              </p>
+              <footer className="blockquote-footer" id="author">
+                <cite title="Source Title">{this.state.author}</cite>
+              </footer> 
+            </blockquote>
           </div>
         </div>
-        <div className = "row">
-          <div className = "col-6" id="author">
-            -{this.state.author}        
-          </div>
-        </div>
-        <div className = "row">
+        {/* <div className = "row">
           <div className = "col-4">
           </div>
           <div className = "col-4">
-            <button type="button" className="btn btn-outline-primary" id="tweet-quote">Tweet This</button>
+          <a href={"https://twitter.com/intent/tweet?related=freecodecamp&text=" + encodeURIComponent('"' + this.state.quote + '" - ' + this.state.author)} id="tweet-quote" target="_blank">Tweet This<i class="fab fa-twitter"></i></a>
           </div>
           <div className = "col-4">
-              <button type="button" className="btn btn-outline-success" id="new-quote">Quote Again!</button>
+              <button type="button" className="btn btn-outline-success" id="new-quote" onClick={this.getQuote}>Another</button>
           </div>
-        </div>
+        </div> */}
+          <a className ="btn btn-outline-info btn-lg btn-block" href={"https://twitter.com/intent/tweet?related=freecodecamp&text=" + encodeURIComponent('"' + this.state.quote + '" - ' + this.state.author)} id="tweet-quote" target="_blank">Tweet This <i class="fab fa-twitter"></i></a>
+          <button type="button" className="btn btn-outline-success btn-lg btn-block" id="new-quote" onClick={this.getQuote}>Another <i class="far fa-quote-right"></i></button>
       </div>
     )
   }
