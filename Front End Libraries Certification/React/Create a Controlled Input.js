@@ -12,15 +12,14 @@ class ControlledInput extends React.Component {
   handleChange(event){
     this.setState({
       input : event.target.value
-    })
+    });
   }
   // change code above this line
   render() {
     return (
       <div>
         { /* change code below this line */}
-        <input value ={this.state.input} onChange={this.handleChange}/>
-
+        <input value={this.state.input} onChange={this.handleChange} />
         { /* change code above this line */}
         <h4>Controlled Input:</h4>
         <p>{this.state.input}</p>
