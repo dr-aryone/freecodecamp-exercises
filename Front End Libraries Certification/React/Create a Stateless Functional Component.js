@@ -1,9 +1,7 @@
 const MyComponent = function() {
   // change code below this line
   return (
-    <div>Hello World!</div>
+    <div>Functional Component</div>
   );
-
-
   // change code above this line
 }
