@@ -1,5 +1,3 @@
 # FreeCodeCamp
 
-Repository of all the solutions to the challenges and projects.
-
-Please checkout other repositories for my projects.
+Repository of solutions that I solved to help out fellow campers and my own reminders.
