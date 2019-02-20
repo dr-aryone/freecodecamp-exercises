@@ -7,10 +7,9 @@ class Dialog extends React.Component {
   }
   // change code below this line
   componentWillReceiveProps(nextProps) {
-      console.log(this.props);
-      console.log(nextProps);
+    console.log(this.props);
+    console.log(nextProps);
   }
-
   componentDidUpdate() {
     console.log(nextProps);
   }
