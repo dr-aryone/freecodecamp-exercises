@@ -1,10 +1,10 @@
 // define ADD, addMessage(), messageReducer(), and store here:
 const ADD = 'ADD';
 
-function addMessage(msg){
+function addMessage(message){
     return {
         type: ADD,
-        message: msg
+        message
     };
 };
 
@@ -16,5 +16,3 @@ const messageReducer = (state = [], action) => {
 };
 
 const store = Redux.createStore(messageReducer);
-
-//optionally store.dispatch(addMessage())
