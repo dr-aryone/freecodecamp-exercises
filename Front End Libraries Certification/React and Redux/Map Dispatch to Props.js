@@ -1,3 +1,4 @@
+
 const addMessage = (message) => {
   return {
     type: 'ADD',
@@ -6,8 +7,7 @@ const addMessage = (message) => {
 };
 
 // change code below this line
-
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
   return {
     submitNewMessage: function(newMessage){
       dispatch(addMessage(newMessage));
