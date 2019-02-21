@@ -11,7 +11,7 @@ const immutableReducer = (state = ['Do not mutate state!'], action) => {
 const addToDo = (todo) => {
   return {
     type: 'ADD_TO_DO',
-    todo: todo
+    todo
   }
 }
 
