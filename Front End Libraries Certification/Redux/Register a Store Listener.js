@@ -15,7 +15,7 @@ const store = Redux.createStore(reducer);
 let count = 0;
 
 // change code below this line
-store.subscribe( () => count +=1 )
+store.subscribe(() => count += 1 )
 // change code above this line
 
 store.dispatch({type: ADD});
