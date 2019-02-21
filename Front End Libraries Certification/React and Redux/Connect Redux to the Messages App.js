@@ -1,3 +1,4 @@
+
 // Redux:
 const ADD = 'ADD';
 
@@ -83,21 +84,18 @@ const Provider = ReactRedux.Provider;
 const connect = ReactRedux.connect;
 
 // define the Container component here:
-
-
-const Container = connect(mapStateToProps,mapDispatchToProps)(Presentational);
-
-
+const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational)
 
 class AppWrapper extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
+    // complete the return statement:
     return (
-    <Provider store={store}>
-      <Container/>
-    </Provider>
-    )
+      <Provider store={store}> 
+        <Container />
+      </Provider>
+    );
   }
 };
