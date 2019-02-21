@@ -1,4 +1,3 @@
-
 // Redux:
 const ADD = 'ADD';
 
@@ -57,12 +56,7 @@ class Presentational extends React.Component {
           onChange={this.handleChange}/><br/>
         <button onClick={this.submitMessage}>Submit</button>
         <ul>
-          {this.props.messages.map( (message, idx) => {
-              return (
-                 <li key={idx}>{message}</li>
-              )
-            })
-          }
+          { this.props.messages.map((message, idx) => <li key={idx}>{message}</li>) }
         </ul>
       </div>
     );
