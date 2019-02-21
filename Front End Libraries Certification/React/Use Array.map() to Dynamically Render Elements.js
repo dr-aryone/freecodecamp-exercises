@@ -1,3 +1,4 @@
+
 const textAreaStyles = {
   width: 235,
   margin: 5
@@ -27,9 +28,8 @@ class MyToDoList extends React.Component {
     });
   }
   render() {
-    const items = this.state.toDoList.map((val) => {
-      return <li>{val}</li>;
-    })
+    const items = this.state.toDoList.map(val => <li>{val}</li>
+    )
     return (
       <div>
         <textarea
