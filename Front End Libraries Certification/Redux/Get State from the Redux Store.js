@@ -3,4 +3,4 @@ const store = Redux.createStore(
 );
 
 // change code below this line
-let currentState = store.getState();
+const currentState = store.getState();
