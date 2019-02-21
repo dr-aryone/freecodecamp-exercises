@@ -2,9 +2,7 @@ const immutableReducer = (state = [0,1,2,3,4,5], action) => {
   switch(action.type) {
     case 'REMOVE_ITEM':
       // don't mutate state here or the tests will fail
-      let newArr = [...state];
-      newArr.splice(action.index, 1);
-      return newArr;
+      return state.filter((value, index) => index !== action.index);
     default:
       return state;
   }
