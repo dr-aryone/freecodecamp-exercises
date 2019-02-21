@@ -1,6 +1,6 @@
-  // change code below this line
-  const LOGIN = "LOGIN";
-  const LOGOUT = "LOGOUT";
+// change code below this line
+  const LOGIN= "LOGIN";
+  const LOGOUT= "LOGOUT";
 // change code above this line
 
 const defaultState = {
