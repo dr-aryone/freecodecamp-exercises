@@ -1,9 +1,10 @@
 function factorialize(num) {
-  let output = 1;
-  for(let i=num; i>0; i--){
-    output *= i;
+  let product=1;
+
+  for(let i=1; i<=num; i++) {
+    product *= i;
   }
-  return output;
+  return product;
 }
 
 factorialize(5);
