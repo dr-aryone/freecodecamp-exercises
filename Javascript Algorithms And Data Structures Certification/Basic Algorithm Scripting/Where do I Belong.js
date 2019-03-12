@@ -1,14 +1,14 @@
 function getIndexToIns(arr, num) {
-  // Find my place in this sorted array.
-  arr = arr.sort((a,b)=>a-b);
+  const sortedArr = arr.sort((a, b) => a-b);
+  const length = sortedArr.length;
 
-  for(let i=0; i<arr.length; i++){
-    if(num === arr[i]) 
-      return i;
-    else if(num >= arr[i] && num < arr[i+1]) 
-      return ++i;
+  if(num > sortedArr[length-1]) {
+    return length;
+  } else if(!length) {
+    return 0;
   }
-  return arr.length;
+
+  return arr.findIndex(number => number >= num)
 }
 
-getIndexToIns([2, 5, 10], 15)
+getIndexToIns([40, 60], 50);
