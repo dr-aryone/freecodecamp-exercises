@@ -1,6 +1,6 @@
 function getIndexToIns(arr, num) {
   const sortedArr = arr.sort((a, b) => a-b);
-  const length = sortedArr.length;
+  const { length } = sortedArr;
 
   if(num > sortedArr[length-1]) {
     return length;
