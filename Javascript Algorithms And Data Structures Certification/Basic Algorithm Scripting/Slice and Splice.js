@@ -1,8 +1,7 @@
 function frankenSplice(arr1, arr2, n) {
-  // It's alive. It's alive!
-  let newArr = arr2.slice();
-  newArr.splice(n, 0, ...arr1);
+  const newArr = arr2.slice();
 
+  newArr.splice(n, 0, ...arr1);
   return newArr;
 }
 
