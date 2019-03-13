@@ -5,14 +5,8 @@ var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Movi
 // New parameters should come before the bookName one
 
 // Add your code below this line
-function add (arr, bookName) {
-  
-  let copyBookList = [...arr];
-
-  copyBookList.push(bookName);
-
-  return copyBookList;
-
+function add(bookList, bookName) {
+  return [...bookList, bookName];
   // Add your code above this line
 }
 
@@ -20,21 +14,20 @@ function add (arr, bookName) {
 // New parameters should come before the bookName one
 
 // Add your code below this line
-function remove (arr, bookName) {
+function remove(bookList, bookName) {
+  const newBookList = [...bookList];
+  const index = newBookList.indexOf(bookName);
+  
+  if (index >= 0) {
+    newBookList.splice(index, 1);
+  }
+  return newBookList;
+  // Add your code above this line
 
-  let copyBookList = [...arr];
-
-  if (copyBookList.indexOf(bookName) >= 0) {
-    copyBookList.splice(copyBookList.indexOf(bookName), 1);
-    
-    return copyBookList
-    
-    // Add your code above this line
-    }
 }
 
 var newBookList = add(bookList, 'A Brief History of Time');
 var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
 var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
-
-console.log(newestBookList);
+console.log(bookList);
+console.log(newBookList);
