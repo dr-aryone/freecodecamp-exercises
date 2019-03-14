@@ -1,6 +1,6 @@
 function checkPositive(arr) {
   // Add your code below this line
-  return arr.some((val) => val > 0);
+  return arr.some(number => number > 0);
   
   // Add your code above this line
 }
