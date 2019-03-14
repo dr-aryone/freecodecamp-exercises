@@ -1,6 +1,6 @@
 // the global variable
 var watchList = [
-  {  
+  {
     "Title": "Inception",
     "Year": "2010",
     "Rated": "PG-13",
@@ -21,8 +21,8 @@ var watchList = [
     "imdbID": "tt1375666",
     "Type": "movie",
     "Response": "True"
- },
- {  
+  },
+  {
     "Title": "Interstellar",
     "Year": "2014",
     "Rated": "PG-13",
@@ -43,8 +43,8 @@ var watchList = [
     "imdbID": "tt0816692",
     "Type": "movie",
     "Response": "True"
- },
- {
+  },
+  {
     "Title": "The Dark Knight",
     "Year": "2008",
     "Rated": "PG-13",
@@ -65,8 +65,8 @@ var watchList = [
     "imdbID": "tt0468569",
     "Type": "movie",
     "Response": "True"
- },
- {  
+  },
+  {
     "Title": "Batman Begins",
     "Year": "2005",
     "Rated": "PG-13",
@@ -87,8 +87,8 @@ var watchList = [
     "imdbID": "tt0372784",
     "Type": "movie",
     "Response": "True"
- },
- {
+  },
+  {
     "Title": "Avatar",
     "Year": "2009",
     "Rated": "PG-13",
@@ -109,13 +109,13 @@ var watchList = [
     "imdbID": "tt0499549",
     "Type": "movie",
     "Response": "True"
- }
+  }
 ];
 
 // Add your code below this line
-
-let filteredMovies = watchList.filter((movie) => movie.Director === "Christopher Nolan")
-let averageRating = filteredMovies.map((movie) => parseFloat(movie.imdbRating)).reduce((prev, current) => prev + current) / filteredMovies.length;
+var filteredMovieList = watchList.filter(movie => movie.Director === "Christopher Nolan");
+var averageRating = filteredMovieList.reduce((accumulator, movie) => accumulator + parseFloat(movie.imdbRating)
+  , 0) / filteredMovieList.length;
 
 // Add your code above this line
 
