@@ -2,8 +2,9 @@
 var globalTitle = "Winter Is Coming";
 
 // Add your code below this line
-function urlSlug(result) {
-  return result.toLowerCase().trim(" ").split(/\s+/).join("-");
+function urlSlug(title) {
+  return title.toLowerCase().trim().split(/\s+/).join("-");
+  
 }
 // Add your code above this line
 
