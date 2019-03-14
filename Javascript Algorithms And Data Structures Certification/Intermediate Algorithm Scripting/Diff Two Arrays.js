@@ -1,15 +1,8 @@
 function diffArray(arr1, arr2) {
-  var newArr = [];
-  // Same, same; but different.
-  arr1.forEach((val) => {
-    if(arr2.indexOf(val) < 0) newArr.push(val);
-  });
+  const result1 = arr1.filter(number => !arr2.includes(number));
+  const result2 = arr2.filter(number => !arr1.includes(number));
 
-  arr2.forEach((val) => {
-    if(arr1.indexOf(val) < 0) newArr.push(val);
-  });
-
-  return newArr;
+  return [...result1, ...result2];
 }
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
