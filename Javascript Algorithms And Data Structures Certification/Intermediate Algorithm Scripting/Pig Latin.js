@@ -1,14 +1,13 @@
 function translatePigLatin(str) {
-  const vowels = /[aeiou]/i;
-  
-  if(vowels.test(str[0])) return str + "way";
+  const regex = /[aeiou]/;
+  const index = str.split('').findIndex(letter => regex.test(letter))
 
-  for(let i=0; i<str.length; i++) {
-    if(vowels.test(str[i]))
-      return str.slice(i) + str.slice(0, i) + "ay";
+  if (index > 0) {
+    return str.slice(index) + str.slice(0, index) + 'ay'; // 1st index not vowel
+  } else if (index === 0) {
+    return str + 'way'; // 1st index vowel
   }
-
-  return str + "ay";
+  return str + 'ay'; // all consonants
 }
 
-translatePigLatin("consonant");
+translatePigLatin("qwty")
