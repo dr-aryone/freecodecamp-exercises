@@ -1,17 +1,17 @@
 function pairElement(str) {
-  let obj = {
-    "A" : "T",
-    "T" : "A",
-    "C" : "G",
-    "G" : "C"
+  const map = {
+    G: "C",
+    C: "G",
+    A: "T",
+    T: "A"
   }
-  let output = [];
+  const result = [];
 
-  for(let i=0; i<str.length; i++) {
-    output.push([str[i], obj[str[i]]]);
+  for(let letter of str) {
+    result.push([letter, map[letter]]);
   }
 
-  return output;
+  return result;
 }
 
 pairElement("GCG");
