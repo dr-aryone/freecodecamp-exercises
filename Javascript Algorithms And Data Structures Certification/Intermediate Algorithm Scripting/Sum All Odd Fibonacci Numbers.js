@@ -1,19 +1,25 @@
 function sumFibs(num) {
-  let fibs = [0, 1]
-  let sum = 1;
-  let i = 2;
+  if (num <= 0) return null;
 
-  while(fibs[i-1]<=num) {
-      fibs[i] = fibs[i-1] + fibs[i-2];
-      if(fibs[i]%2)
-        sum += fibs[i];
-      i++;
+  const oddArr = [1, 1];
+  let prevValue = 1;
+  let currentValue = 2;
+  let temp = 0;
+
+  while (true) {
+    temp = currentValue;
+    currentValue = prevValue + currentValue;
+    prevValue = temp;
+
+    if (currentValue <= num && currentValue % 2 === 1) {
+      oddArr.push(currentValue);
     }
-    
-  if(fibs[i-1]%2)
-    return sum-fibs[i-1];
-  else
-    return sum;
+    if(currentValue > num) {
+      break;
+    }
+  }
+
+  return oddArr.reduce((accum, current) => accum + current);
 }
 
-sumFibs(75025);
+sumFibs(10);
