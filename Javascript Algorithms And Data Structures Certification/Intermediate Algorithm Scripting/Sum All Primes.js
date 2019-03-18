@@ -1,14 +1,18 @@
+function isPrime(num) {
+  for(let i=2; i<num; i++) {
+    if(num % i === 0)
+      return false;
+  }
+  return true;
+}
+
 function sumPrimes(num) {
   let sum = 0;
 
-  for(let i=2; i<=num; i++) {
-    let isPrime = true;
-    for(let j=2; j<i; j++) {
-      if(i % j === 0) 
-        isPrime = false;
-    }
-    if(isPrime) 
+  for(let i=2; i<= num; i++) {
+    if(isPrime(i)) {
       sum += i;
+    }
   }
 
   return sum;
