@@ -1,11 +1,19 @@
 function steamrollArray(arr) {
   // I'm a steamroller, baby
-  let i = 0;
-  do {
-    arr = arr.reduce((acc, val) => acc.concat(val), []);
-  } while(i < arr.length)
+  const newArr = [];
 
-  return arr;
+  const flatten = arr => {
+    for (let item of arr) {
+      if (!Array.isArray(item)) {
+        newArr.push(item);
+      } else {
+        flatten(item);
+      }
+    }
+  }
+  flatten(arr);
+
+  return newArr;
 }
 
 steamrollArray([1, [2], [3, [[4]]]]);
