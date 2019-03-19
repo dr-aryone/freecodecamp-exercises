@@ -1,10 +1,9 @@
 function dropElements(arr, func) {
-  // Drop them elements.
-  for(let i=0; i<arr.length; i++) {
-    if(func(arr[i]))
-      return arr.slice(i);
-  }
-  return [];
+  const index = arr.findIndex(func);
+
+  if(index === -1)  return [];
+  
+  return arr.slice(index);
 }
 
-dropElements([1, 2, 3], function(n) {return n < 3; });
+dropElements([1, 2, 3, 4], function(n) {return n > 5;})
