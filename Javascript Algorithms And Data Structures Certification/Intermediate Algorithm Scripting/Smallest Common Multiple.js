@@ -1,38 +1,29 @@
-// Credit to the guide. https://forum.freecodecamp.org/t/freecodecamp-algorithm-challenge-guide-smallest-common-multiple/16075
-
 function smallestCommons(arr) {
-  // Sort array from greater to lowest
-  // This line of code was from Adam Doyle (http://github.com/Adoyle2014)
-  arr.sort(function(a, b) {
-    return b - a;
-  });
+  const sortedArr = arr.sort((a, b) => b - a);
+  let newArr = [];
+  let smallestCommon = 0;
+  let flag = true;
 
-  // Create new array and add all values from greater to smaller from the
-  // original array.
-  var newArr = [];
-  for (var i = arr[0]; i >= arr[1]; i--) {
-    newArr.push(i);
+  for (let i = sortedArr[0]; i >= sortedArr[1]; i--) {
+    newArr.push(i)
   }
+  let i = 1;
 
-  // Variables needed declared outside the loops.
-  var quot = 0;
-  var loop = 1;
-  var n;
-
-  // Run code while n is not the same as the array length.
-  do {
-    quot = newArr[0] * loop * newArr[1];
-    for (n = 2; n < newArr.length; n++) {
-      if (quot % newArr[n] !== 0) {
+  while (flag) {
+    smallestCommon = newArr[0] * newArr[1] * i;
+    for (let j = 2; j < newArr.length; j++) {
+      if (smallestCommon % newArr[j] !== 0) {
         break;
       }
+      if (j === newArr.length - 1) {
+        flag = false;
+      }
     }
+    i++;
+  }
 
-    loop++;
-  } while (n !== newArr.length);
-
-  return quot;
+  return smallestCommon;
 }
 
-// test here
-smallestCommons([1,5]);
+
+smallestCommons([1, 5]);
