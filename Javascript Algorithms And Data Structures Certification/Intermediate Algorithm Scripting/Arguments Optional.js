@@ -1,23 +1,22 @@
-function addTogether() {
-  for (let i of arguments) {
-      var oneNumber = i
-      if (typeof i !== "number") {
-          return undefined
-      }
+function isNumber(number) {
+  return typeof number === "number";
+}
+
+function addTogether(num1, num2) {
+  if (!isNumber(num1) || num2 && !isNumber(num2))
+    return undefined;
+
+  if (num2 && isNumber(num2)) {
+    return num1 + num2;
   }
-  if (arguments.length === 2) {
-      return arguments[0] + arguments[1];
-  } 
-  
-  else {
-      return function sum(num) {
-          if (typeof num !== "number") {
-              return undefined
-          } else {
-          return oneNumber + num;
-          }
-      };
+
+  return function (num3) {
+    if (!isNumber(num3))
+      return undefined;
+
+    return num1 + num3
   }
 }
 
-addTogether(2)(3)
+addTogether(2, 3);
+
