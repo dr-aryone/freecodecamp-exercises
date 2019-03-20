@@ -1,23 +1,24 @@
-var GM = 398600.4418;
-var earthRadius = 6367.4447;
+const GM = 398600.4418;
+const earthRadius = 6367.4447;
 
+const orbitalP = alt => {
+  const OR = earthRadius + alt;
+  const OP = 2 * Math.PI * (Math.pow((Math.pow(OR, 3) / GM), 0.5));
+  return Math.round(OP);
+}
 
-function orbitalPeriod(arr) { 
-  var finalArr = [];
-  
-  arr.forEach(function(obj){
-    let OP = orbitalP(obj.avgAlt);
+function orbitalPeriod(arr) {
+  const finalArr = [];
+
+  arr.forEach(obj => {
+    const orbitalPeriod = orbitalP(obj.avgAlt);
     delete obj.avgAlt;
-    obj.orbitalPeriod = OP;
+    obj.orbitalPeriod = orbitalPeriod;
     finalArr.push(obj);
   });
-  
-  
+
+
   return finalArr;
 }
 
-function orbitalP(alt){
-  var OR = earthRadius + alt;
-  var OP = 2 * Math.PI * (Math.pow((Math.pow(OR, 3)/GM),0.5));
-  return Math.round(OP);
-}  
+orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }]);
