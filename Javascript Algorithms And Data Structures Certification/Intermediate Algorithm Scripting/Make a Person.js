@@ -1,16 +1,17 @@
+// getFirstName() getLastName() getFullName() setFirstName(first) setLastName(last) setFullName(firstAndLast)
+
 var Person = function(firstAndLast) {
-  // Complete the method below and implement the others similarly
-  let fullName = firstAndLast
-  let firstName = fullName.split(" ")[0];
-  let lastName = fullName.split(" ")[1];
+  let fullName = firstAndLast;
+  let firstName = firstAndLast.split(" ")[0];
+  let lastName = firstAndLast.split(" ")[1];
 
   this.getFirstName = function() {
     return firstName;
-  }
+  };
 
   this.getLastName = function() {
     return lastName;
-  }
+  };
 
   this.getFullName = function() {
     return fullName;
@@ -18,21 +19,20 @@ var Person = function(firstAndLast) {
 
   this.setFirstName = function(first) {
     firstName = first;
-    fullName = first + " " + lastName;
+    fullName = first + " " + fullName.split(" ")[1];
   }
 
   this.setLastName = function(last) {
     lastName = last;
-    fullName = firstName + " " + last;
+    fullName = fullName.split(" ")[0] + " " + last;
   }
 
   this.setFullName = function(firstAndLast) {
+    fullName = firstAndLast;
     firstName = firstAndLast.split(" ")[0];
     lastName = firstAndLast.split(" ")[1];
-    fullName = firstAndLast;
   }
 
 };
 
 var bob = new Person('Bob Ross');
-bob.getFullName();
