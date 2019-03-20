@@ -1,13 +1,8 @@
 function palindrome(str) {
   // Good luck!
-  str = str.replace(/[^a-z0-9]+/gi, "");
+  const cleanStr = str.replace(/[^a-zA-Z0-9]+/gi, "").toLowerCase();
 
-  if(str.toLowerCase() === str.split("").reverse().join("").toLowerCase())
-    return true;
-
-  return false;
+  return cleanStr === cleanStr.split("").reverse().join("");
 }
 
-
-
-palindrome("A man, a plan, a canal. Panama")
+palindrome("My age is 0, 0 si ega ym.")
