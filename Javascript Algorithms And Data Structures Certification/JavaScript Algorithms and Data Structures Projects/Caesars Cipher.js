@@ -1,16 +1,22 @@
 function rot13(str) { // LBH QVQ VG!
-  let arr = str.split("");
+  // cap 65 - 90 // 13 // 77.5
+  let finalStr = "";
 
-    for(let i=0; i<arr.length; i++) {
-        if(arr[i].charCodeAt(0) >= 65 && arr[i].charCodeAt(0) <= 90) {
-            if(arr[i].charCodeAt(0) <= 77)
-                arr[i] = String.fromCharCode(arr[i].charCodeAt(0) + 13);
-            else
-                arr[i] = String.fromCharCode(arr[i].charCodeAt(0) - 13);
-        }
+  for(let char of str) {
+    let code = char.charCodeAt(0);
+    
+    if(code >= 65 && code <= 90) {
+      if(code <= 77) {
+        code += 13;
+      } else if(code >= 78) {
+        code -= 13;
+      }
     }
+    finalStr += String.fromCharCode(code);
+  }
 
-  return arr.join("");
+
+  return finalStr;
 }
 
 // Change the inputs below to test
