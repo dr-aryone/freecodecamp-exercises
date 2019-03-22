@@ -1,91 +1,100 @@
 function checkCashRegister(price, cash, cid) {
-  let cidCopy = [];
-  let returnArr = [];
-  var change = cash - price;
-  let length;
-  let val;
-  let rcid = 0; //remaining change in drawer
-  let finalObj = {};
+  let sortedCid = cid.reverse();
+  let originalChange = parseFloat((cash - price).toFixed(2));
+  let change = originalChange;
+  let changeCid = [];
+  const insufficient = { status: "INSUFFICIENT_FUNDS", change: [] };
 
-  for(let i=0; i<cid.length; i++) { //Deep copy of initial array cid to cidCopy
-    cidCopy.push([cid[i][0], cid[i][1]]);
+  const currency = {
+    PENNY: 0.01,
+    NICKEL: 0.05,
+    DIME: 0.1,
+    QUARTER: 0.25,
+    ONE: 1,
+    FIVE: 5,
+    TEN: 10,
+    TWENTY: 20,
+    "ONE HUNDRED": 100
   }
 
-  // console.log("change is : " + change)
-  // Adding monetary conversions information to our copy
-  // cidCopy[0].push(0.01);
-  // cidCopy[1].push(0.05);
-  // cidCopy[2].push(0.1);
-  // cidCopy[3].push(0.25);
-  // cidCopy[4].push(1);
-  // cidCopy[5].push(5);
-  // cidCopy[6].push(10);
-  // cidCopy[7].push(20);
-  // cidCopy[8].push(100);
+  let sum = parseFloat(sortedCid.reduce((accumulator, current) => accumulator + current[1], 0).toFixed(2));
 
-  cidCopy[0][2] = 0.01;
-  cidCopy[1][2] = 0.05;
-  cidCopy[2][2] = 0.1;
-  cidCopy[3][2] = 0.25;
-  cidCopy[4][2] = 1;
-  cidCopy[5][2] = 5;
-  cidCopy[6][2] = 10;
-  cidCopy[7][2] = 20;
-  cidCopy[8][2] = 100;
-  
-  
-  // Adding # of availiable coins
-  for(let i=0; i<cidCopy.length; i++) {
-    cidCopy[i].push(Math.round(cidCopy[i][1] / cidCopy[i][2]));
+  console.log("change is", typeof change, change)
+  console.log("Sum is", typeof sum, sum)
+
+  // if change is more than sum of cid
+  if (change > sum) {
+    return insufficient;
   }
 
-  // console.log(cidCopy);
+  // or can't return exact change.
 
-  for(let i=cidCopy.length-1; i>= 0; i--) { // start from greatest
-    if(change > cidCopy[i][2]) { 
-          length = cidCopy[i][3];
-      for(let j=1; j<=length; j++) {
-        val = cidCopy[i][2];
-        if(change >= val) {
-          change -= val;
-          change = change.toFixed(2);
-          cidCopy[i][3]--;
-          cidCopy[i][1] = cidCopy[i][2] * j;
-        }
+  // if change is less than sum of cid then subract money and works good. return sorted from highest.
+  sortedCid.forEach(array => {
+    let unit = array[0];
+    let remainder = array[1];
+    let moneySpent = 0;
+    // keep subtracting changes to its unit until change is less than its unit or remainder is 0
+    while (change >= currency[unit] && remainder >= currency[unit]) {
+      change = (change - currency[unit]).toFixed(2);
+      moneySpent += currency[unit];
+      remainder = (remainder - currency[unit]).toFixed(2);
+      console.log("change in while", change)
+      console.log("remainder in while", remainder)
+      array[1] = remainder;
+
+      if (change < currency[unit] || remainder < currency[unit]) {
+        let usedChange = [unit, parseFloat(moneySpent.toFixed(2))]
+        changeCid.push(usedChange)
       }
-      returnArr.push([cidCopy[i][0], cidCopy[i][1]]);
+    }
+  })
+
+  cid = sortedCid.reverse();
+  console.log("sum", sum)
+  console.log("change", change)
+  console.log("cid", cid)
+  console.log("change cid", changeCid)
+  // Here is your change, ma'am.
+
+  if (change > 0) {
+    return insufficient;
+  }
+
+  // if change is equal to the sum of cid. status is closed. and all cid is 0
+  if (originalChange == sum) {
+    const obj = cid.reduce((p, c) => {
+      p[c[0]] = c[1];
+      return p;
+    }, {})
+    let finalArr = [];
+
+    for(let arr of changeCid) {
+      let name = arr[0];
+      obj[name] = arr[1];
+    }
+
+    const keys = Object.keys(obj);
+
+    for(let key of keys) {
+      finalArr.push([key, obj[key]]);
+    }
+
+    console.log("finalArr", finalArr)
+
+    return {
+      status: "CLOSED", change: finalArr
     }
   }
 
-  // console.log(cidCopy);
-
-  // Determine if any bills/coins are left in the drawer
-  for(let i=0; i<cidCopy.length; i++) {
-    rcid += cidCopy[i][3];
+  return {
+    status: "OPEN",
+    change: changeCid
   }
-
-  // console.log(change)
-  // Floating round error
-  if(change < 0.01) change *= 100;
-  // console.log(change);
-
-  finalObj = {
-    status : "OPEN",
-    change : returnArr
-  }
-
-  if(change > 0) {
-    finalObj.status = "INSUFFICIENT_FUNDS";
-    finalObj.change = []
-    return finalObj;
-  }
-  else if(change == 0 && rcid === 0) {
-    finalObj.status = "CLOSED";
-    finalObj.change = cid;
-    return finalObj;
-  }
-  else return finalObj;
 }
 
-checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
+checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])
+// {status: "CLOSED", change: [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], 
 
+// checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])
+//  {status: "OPEN", change: [["QUARTER", 0.5]]}
